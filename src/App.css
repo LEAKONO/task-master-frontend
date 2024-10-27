@@ -1,0 +1,54 @@
+:root {
+  --bg-color: #f9f9f9; /* Light mode background */
+  --text-color: #333; /* Light mode text color */
+  --border-color: #ccc; /* Light mode border color */
+  --input-bg: #fff; /* Light mode input background */
+}
+
+.dark-mode {
+  --bg-color: #333; /* Dark mode background */
+  --text-color: #f9f9f9; /* Dark mode text color */
+  --border-color: #555; /* Dark mode border color */
+  --input-bg: #555; /* Dark mode input background */
+}
+
+.App {
+  text-align: center;
+  background-color: var(--bg-color); /* Use CSS variable for background */
+  color: var(--text-color); /* Use CSS variable for text color */
+  min-height: 100vh; /* Ensure full height */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--bg-color); /* Use CSS variable for header background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-color); /* Use CSS variable for header text color */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -33,7 +33,7 @@ const CommentForm = ({ taskId, onCommentAdded }) => {
 
         try {
             await axios.post(
-                `http://127.0.0.1:5000/routes/tasks/${taskId}/comments`,
+                `https://task-master-qeu7.onrender.com/routes/tasks/${taskId}/comments`,
                 { content: comment },
                 {
                     headers: {

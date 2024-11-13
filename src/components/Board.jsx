@@ -34,7 +34,7 @@ const Board = () => {
         if (user) {
             const fetchTasks = async () => {
                 try {
-                    const response = await axios.get('http://127.0.0.1:5000/routes/tasks', {
+                    const response = await axios.get('https://task-master-qeu7.onrender.com/routes/tasks', {
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     const fetchedTasks = response.data.tasks;
@@ -81,7 +81,7 @@ const Board = () => {
 
         try {
             await axios.put(
-                `http://127.0.0.1:5000/routes/tasks/${removed.id}`,
+                `https://task-master-qeu7.onrender.com/routes/tasks/${removed.id}`,
                 { status: destinationColumn },  // Pass the new status
                 { headers: { Authorization: `Bearer ${token}` } }  // Ensure token is included
             );

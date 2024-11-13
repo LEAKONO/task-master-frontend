@@ -28,7 +28,7 @@ const TaskDetail = () => {
         const fetchTaskDetails = async () => {
             try {
                 const token = localStorage.getItem('token'); 
-                const response = await axios.get(`http://127.0.0.1:5000/routes/tasks/${taskId}`, {
+                const response = await axios.get(`https://task-master-qeu7.onrender.com/routes/tasks/${taskId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -45,7 +45,7 @@ const TaskDetail = () => {
         const fetchComments = async () => {
             try {
                 const token = localStorage.getItem('token'); 
-                const response = await axios.get(`http://127.0.0.1:5000/routes/tasks/${taskId}/comments`, {
+                const response = await axios.get(`https://task-master-qeu7.onrender.com/routes/tasks/${taskId}/comments`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -61,7 +61,7 @@ const TaskDetail = () => {
     }, [taskId, user, navigate]);
 
     const handleCommentAdded = () => {
-        axios.get(`http://127.0.0.1:5000/routes/tasks/${taskId}/comments`, {
+        axios.get(`https://task-master-qeu7.onrender.com/routes/tasks/${taskId}/comments`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

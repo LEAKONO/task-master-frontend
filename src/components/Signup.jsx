@@ -73,8 +73,8 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:5000/auth/signup', { username, email, password });
-      navigate('/login'); // Redirect to login page after successful sign-up
+      await axios.post('https://task-master-qeu7.onrender.com/auth/signup', { username, email, password });
+      navigate('/login'); 
     } catch (error) {
       console.error('Sign up error', error);
     }
@@ -101,7 +101,7 @@ const SignUp = () => {
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
               required 
-              placeholder="you@example.com" // Placeholder for better UX
+              placeholder="you@example.com" 
             />
           </div>
           <div>

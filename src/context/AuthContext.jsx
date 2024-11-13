@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const response = await axios.post('http://127.0.0.1:5000/auth/login', { email, password });
+            const response = await axios.post('https://task-master-qeu7.onrender.com/auth/login', { email, password });
             const token = response.data.token || response.data.access_token;
 
             if (token) {
